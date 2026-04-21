@@ -1,0 +1,23 @@
+{
+  "name": "data-platform-ai-toolkit",
+  "image": "ghcr.io/ministryofjustice/devcontainer-base:latest",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/ministryofjustice/devcontainer-feature/apm": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "EditorConfig.EditorConfig",
+        "GitHub.vscode-github-actions",
+        "GitHub.vscode-pull-request-github",
+        "GitHub.copilot-chat"
+      ],
+      "settings": {
+        "files.associations": {
+          "*.html.md.erb": "markdown"
+        }
+      }
+    }
+  }
+}
