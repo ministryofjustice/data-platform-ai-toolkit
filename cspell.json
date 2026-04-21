@@ -1,0 +1,29 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en-GB",
+  "ignorePaths": [
+    ".terraform.lock.hcl",
+    "configuration/teams.yaml",
+    "configuration/users.yaml"
+  ],
+  "words": [
+    "charliermarsh",
+    "cooldown",
+    "isort",
+    "jsonschema",
+    "ministryofjustice",
+    "mlops",
+    "mojdp",
+    "octo",
+    "openssf",
+    "pycodestyle",
+    "pyflakes",
+    "pygithub",
+    "pylint",
+    "pyupgrade",
+    "schemafile",
+    "venv",
+    "zizmor"
+  ]
+}
