@@ -1,0 +1,25 @@
+---
+name: Super Linter
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions: {}
+
+jobs:
+  super-linter:
+    name: Super Linter
+    permissions:
+      contents: read
+      packages: read
+      statuses: write
+    uses: ministryofjustice/data-platform-github-actions/.github/workflows/super-linter.yml@e9ce6311ccb9f0a0e6f8885a2694f5a381a38b50 # v3.4.1
+    with:
+      super-linter-variables: |
+        {
+          "VALIDATE_JSCPD": false,
+          "VALIDATE_PYTHON_BLACK": false,
+          "VALIDATE_PYTHON_PYLINT": false
+        }
