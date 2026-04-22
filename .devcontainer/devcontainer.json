@@ -3,8 +3,9 @@
   "image": "ghcr.io/ministryofjustice/devcontainer-base:latest",
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {},
-    "ghcr.io/ministryofjustice/devcontainer-feature/apm": {}
+    "ghcr.io/ministryofjustice/devcontainer-feature/apm:1": {}
   },
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
   "customizations": {
     "vscode": {
       "extensions": [
