@@ -1,0 +1,9 @@
+lockfile_version: '1'
+generated_at: '2026-04-22T19:32:26.084843+00:00'
+dependencies: []
+local_deployed_files:
+- .github/instructions/python.instructions.md
+- .github/prompts/security-audit.prompt.md
+local_deployed_file_hashes:
+  .github/instructions/python.instructions.md: sha256:b81af3058bb02b5e0c54c80108505859561eadbef09049ae5101e0928a2caa1c
+  .github/prompts/security-audit.prompt.md: sha256:cab0dba6dcd74cd96474b67f38f3213bfddb0546770f38c63dc7ced22c9940b4
