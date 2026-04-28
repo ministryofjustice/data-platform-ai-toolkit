@@ -12,9 +12,12 @@
         "EditorConfig.EditorConfig",
         "GitHub.vscode-github-actions",
         "GitHub.vscode-pull-request-github",
-        "GitHub.copilot-chat"
+        "GitHub.copilot-chat",
+        "esbenp.prettier-vscode"
       ],
       "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "files.associations": {
           "*.html.md.erb": "markdown"
         }
