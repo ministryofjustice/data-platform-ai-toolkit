@@ -5,10 +5,12 @@
   "ignorePaths": [
     ".terraform.lock.hcl",
     "configuration/teams.yaml",
-    "configuration/users.yaml"
+    "configuration/users.yaml",
+    ".gitignore"
   ],
   "words": [
     "cooldown",
+    "docstrings",
     "isort",
     "jsonschema",
     "ministryofjustice",
@@ -16,6 +18,7 @@
     "mojdp",
     "octo",
     "openssf",
+    "pathlib",
     "pycodestyle",
     "pyflakes",
     "pygithub",
