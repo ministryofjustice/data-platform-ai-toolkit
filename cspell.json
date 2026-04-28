@@ -6,7 +6,8 @@
     ".terraform.lock.hcl",
     "configuration/teams.yaml",
     "configuration/users.yaml",
-    ".gitignore"
+    ".gitignore",
+    "devcontainer.json"
   ],
   "words": [
     "cooldown",
