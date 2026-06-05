@@ -5,8 +5,7 @@ author: Data Platform Engineering
 targets:
   - copilot
 dependencies:
-  apm:
-    - ministryofjustice/data-platform-ai-toolkit/toolkits/universal#feat/pe-toolkit
+  apm: []
   mcp: []
 includes: auto
 scripts: {}
