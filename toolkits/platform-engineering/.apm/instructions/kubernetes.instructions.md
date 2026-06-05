@@ -4,7 +4,7 @@ description: Kubernetes Instructions
 
 # Kubernetes Instructions
 
-When authenticated the user will have access to the following Kubernetes clusters:
+When authenticated, the user will have access to the following Kubernetes clusters:
 
 - `data-platform-development`
 - `data-platform-test`
