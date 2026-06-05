@@ -33,11 +33,15 @@ To consume Agent Packages defined in this repository:
    ```
 1. Create an `apm.yml` in the root of your repository to declare this toolkit as a dependency:
    ```yaml
-   name: my-project
+   name: <name>
    version: 1.0.0
+   description: APM project for <name>
+   author: Data Platform Engineering
+   targets:
+     - copilot
    dependencies:
-     - name: data-platform-ai-toolkit
-       source: github:ministryofjustice/data-platform-ai-toolkit
+     apm:
+       - ministryofjustice/data-platform-ai-toolkit/toolkits/universal#0.0.1
    ```
 1. Add `apm install` to your `.devcontainer/post-create.sh` script:
    ```bash
