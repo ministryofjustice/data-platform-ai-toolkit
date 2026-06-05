@@ -1,5 +1,5 @@
 ---
-description: Linting Instructionss
+description: Linting Instructions
 ---
 
 # Linting
