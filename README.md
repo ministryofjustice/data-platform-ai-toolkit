@@ -15,7 +15,7 @@ To consume Agent Packages defined in this repository:
    ```json
    {
      "features": {
-       "ghcr.io/ministryofjustice/devcontainer-feature/apm:1": {}
+       "ghcr.io/ministryofjustice/devcontainer-feature/apm:": {}
      }
    }
    ```
