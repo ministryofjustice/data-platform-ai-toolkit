@@ -1,6 +1,6 @@
-name: platform-engineering-toolkit
+name: universal-toolkit
 version: 1.0.0
-description: Platform Engineering Toolkit
+description: Universal Toolkit
 author: Data Platform Engineering
 targets:
 - copilot
