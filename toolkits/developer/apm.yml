@@ -3,7 +3,7 @@ version: 1.0.0
 description: Developer Toolkit
 author: Data Platform Engineering
 targets:
-- copilot
+  - copilot
 dependencies:
   apm: [] #TODO: Try calling the Universal Toolkit in here.
   mcp: []

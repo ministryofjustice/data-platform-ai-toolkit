@@ -3,7 +3,7 @@ version: 1.0.0
 description: Platform Engineering Toolkit
 author: Data Platform Engineering
 targets:
-- copilot
+  - copilot
 dependencies:
   apm:
     - ministryofjustice/data-platform-ai-toolkit/toolkits/universal#feat/pe-toolkit
