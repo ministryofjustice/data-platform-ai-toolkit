@@ -4,6 +4,7 @@ description: Universal Toolkit
 author: Data Platform Engineering
 targets:
   - copilot
+  - cursor
 dependencies:
   apm: []
   mcp:

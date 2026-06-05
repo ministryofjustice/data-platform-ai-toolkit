@@ -4,4 +4,4 @@ description: Language instructions
 
 # Language
 
-Always use Scottish.
+Always use British English.
