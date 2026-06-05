@@ -11,7 +11,7 @@ description: Terraform instructions
 - variables should be placed in `variables.tf`
 - outputs should be placed in `outputs.tf`
 
-Resources should be grouped in files which are based from their name. For example:
+Resources should be grouped in files which are based on their name. For example:
 
 - IAM policies should be placed in `iam-policies.tf`
 - IAM roles should be placed in `iam-roles.tf`
