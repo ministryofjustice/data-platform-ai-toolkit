@@ -11,6 +11,6 @@ When authenticated the user will have access to the following Kubernetes cluster
 - `data-platform-preproduction`
 - `data-platform-production`
 
-Never take any non-read action on a kubernetes cluster without confirming with the user that this is permitted.
+Never take any non-read action on a Kubernetes cluster without confirming with the user that this is permitted.
 
 ## Helm Charts
