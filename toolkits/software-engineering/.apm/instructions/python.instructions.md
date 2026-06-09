@@ -17,6 +17,7 @@ applyTo: "**/*.py"
 - Isolate side effects; keep core logic as pure, easily testable functions.
 - Prefer the standard library over third-party packages when it meets requirements.
 - Use strict rules for security and test correctness; use pragmatic defaults for design choices.
+- Target organisation-supported Python versions (preferably LTS) and avoid adopting language features outside the repository's declared version range.
 - Follow [PEP 8](https://peps.python.org/pep-0008/), deferring to project tooling config (for example line length) where it differs from the letter of the spec.
 - Adopt any pre-existing style rules in the repository over these defaults.
 

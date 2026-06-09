@@ -9,6 +9,7 @@ applyTo: "**/*.py,**/templates/**/*.html"
 
 - Treat this file as the default guidance for day-to-day Django development across this repository.
 - These instructions build on the general Python guidance; apply both, and prefer the more specific rule where they overlap.
+- Default to Django LTS releases for production projects; if using non-LTS, document the reason and planned upgrade path.
 - Prefer Django built-ins over third-party packages when they meet requirements.
 
 ## Project Structure and Routing
