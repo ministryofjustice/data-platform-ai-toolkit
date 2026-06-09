@@ -1,6 +1,6 @@
-name: developer-toolkit
+name: software-engineering-toolkit
 version: 1.0.0
-description: Developer Toolkit
+description: Software Engineering Toolkit
 author: Data Platform Engineering
 targets:
   - copilot
