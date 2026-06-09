@@ -3,5 +3,19 @@
   "version": "0.2",
   "language": "en-GB",
   "ignorePaths": [".gitignore"],
-  "words": ["cooldown", "docstrings", "HSTS", "htmx", "ministryofjustice", "openssf", "pyproject", "pytest", "teardown", "toolkits", "querysets", "zizmor"]
+  "words": [
+    "cooldown",
+    "docstrings",
+    "HSTS",
+    "htmx",
+    "ministryofjustice",
+    "openssf",
+    "overengineering",
+    "pyproject",
+    "pytest",
+    "teardown",
+    "toolkits",
+    "querysets",
+    "zizmor"
+  ]
 }
