@@ -28,7 +28,7 @@ When creating pull requests:
 - Write the PR title in Conventional Commits format: `<type>(<scope>): <description>`.
 - The PR title must describe the overall outcome of the PR, not a single commit.
 - If the first commit subject already reflects the full PR scope, you may reuse it as the PR title.
-- Reference: https://www.conventionalcommits.org/
+- Reference: [Conventional Commits](https://www.conventionalcommits.org/)
 - Do not include emojis in the title.
 - Add labels based on the files and systems changed.
 - If the PR changes Terraform code (`*.tf`, `*.tfvars`, or `terraform/` paths), add the `terraform` label.
