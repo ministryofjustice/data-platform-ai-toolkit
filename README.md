@@ -8,11 +8,11 @@ A central repository of GitHub Copilot instructions and prompt files for Data Pl
 
 ## Available Toolkits
 
-| Toolkit | Package name | Source path | Description |
-| ------- | ------------ | ----------- | ----------- |
-| Universal | `universal-toolkit` | `toolkits/universal` | Universal Copilot instructions for all Data Platform repositories |
-| Platform Engineering | `platform-engineering-toolkit` | `toolkits/platform-engineering` | Platform Engineering Copilot instructions and prompts |
-| Software Engineering | `software-engineering-toolkit` | `toolkits/software-engineering` | Software Engineering Copilot instructions (Python, Django) |
+| Toolkit              | Package name                   | Source path                     | Description                                                       |
+| -------------------- | ------------------------------ | ------------------------------- | ----------------------------------------------------------------- |
+| Universal            | `universal-toolkit`            | `toolkits/universal`            | Universal Copilot instructions for all Data Platform repositories |
+| Platform Engineering | `platform-engineering-toolkit` | `toolkits/platform-engineering` | Platform Engineering Copilot instructions and prompts             |
+| Software Engineering | `software-engineering-toolkit` | `toolkits/software-engineering` | Software Engineering Copilot instructions (Python, Django)        |
 
 ## Setup Instructions
 
