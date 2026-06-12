@@ -32,7 +32,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          apm pack --check-versions --check-clean --json > pack-report.json
+          apm pack --check-versions --check-clean --json > "${RUNNER_TEMP}/pack-report.json"
           sha256sum .claude-plugin/marketplace.json > .claude-plugin/marketplace.json.sha256
           gh release create "${GITHUB_REF_NAME}" \
             .claude-plugin/marketplace.json \
