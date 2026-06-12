@@ -6,4 +6,5 @@ env/
 .DS_STORE
 *.code-workspace
 *.sha256
+.vscode/settings.json
 terraform.tfstate

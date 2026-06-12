@@ -1,0 +1,32 @@
+name: data-platform
+version: 0.1.0
+description: Curated marketplace of Data Platform AI toolkits for GitHub Copilot
+marketplace:
+  owner:
+    name: ministryofjustice
+    url: https://github.com/ministryofjustice
+
+  versioning:
+    strategy: tag_pattern
+
+  build:
+    tagPattern: "{name}-v{version}"
+
+  outputs:
+    claude: {}
+
+  packages:
+    - name: universal-toolkit
+      description: Universal Copilot instructions for all Data Platform repositories
+      source: ./toolkits/universal
+      version: 1.0.0
+
+    - name: platform-engineering-toolkit
+      description: Platform Engineering Copilot instructions and prompts
+      source: ./toolkits/platform-engineering
+      version: 1.1.0
+
+    - name: software-engineering-toolkit
+      description: Software Engineering Copilot instructions (Python, Django)
+      source: ./toolkits/software-engineering
+      version: 1.0.0

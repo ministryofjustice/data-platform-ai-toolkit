@@ -1,0 +1,27 @@
+{
+  "name": "data-platform",
+  "owner": {
+    "name": "ministryofjustice",
+    "url": "https://github.com/ministryofjustice"
+  },
+  "plugins": [
+    {
+      "name": "universal-toolkit",
+      "description": "Universal Copilot instructions for all Data Platform repositories",
+      "version": "1.0.0",
+      "source": "./toolkits/universal"
+    },
+    {
+      "name": "platform-engineering-toolkit",
+      "description": "Platform Engineering Copilot instructions and prompts",
+      "version": "1.1.0",
+      "source": "./toolkits/platform-engineering"
+    },
+    {
+      "name": "software-engineering-toolkit",
+      "description": "Software Engineering Copilot instructions (Python, Django)",
+      "version": "1.0.0",
+      "source": "./toolkits/software-engineering"
+    }
+  ]
+}
