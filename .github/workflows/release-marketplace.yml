@@ -2,9 +2,9 @@
 name: Release Marketplace
 
 on:
-  push:
-    tags:
-      - "*-[0-9]*"
+  release:
+    types:
+      - published
 
 permissions: {}
 
@@ -20,6 +20,7 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 0
+          ref: ${{ github.event.release.tag_name }}
       - name: Set up Python
         uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
         with:
@@ -28,14 +29,13 @@ jobs:
       - name: Install APM CLI
         run: pip install "apm-cli==0.20.0"
 
-      - name: Build and publish marketplace
+      - name: Build and attach marketplace artifacts
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           apm pack --check-versions --check-clean --json > "${RUNNER_TEMP}/pack-report.json"
           sha256sum .claude-plugin/marketplace.json > .claude-plugin/marketplace.json.sha256
-          gh release create "${GITHUB_REF_NAME}" \
+          gh release upload "${GITHUB_REF_NAME}" \
             .claude-plugin/marketplace.json \
             .claude-plugin/marketplace.json.sha256 \
-            --title "${GITHUB_REF_NAME}" \
-            --generate-notes
+            --clobber
