@@ -53,7 +53,7 @@ Consuming repositories declare the toolkits they need in their own `apm.yml` and
        - ministryofjustice/data-platform-ai-toolkit/toolkits/universal#^1.0.0
    ```
 
-   The `#^1.0.0` is a semver range: APM resolves it to the highest matching
+   The `#^1.0.0` is a SemVer range: APM resolves it to the highest matching
    `universal-v<version>` release tag and pins the exact commit in
    `apm.lock.yaml`. Use a caret range to accept compatible updates, or pin an
    exact tag (`#universal-v1.0.0`) or branch (`#main`) instead.
@@ -113,7 +113,7 @@ To draft the new release:
    (for example `universal-v1.0.0`). The `<package-name>` matches the toolkit's
    source directory (for example `universal`) and `<version>` must match that
    package's `version:` in the root `apm.yml`. The `v` prefix and the matching
-   name are what let consumers pin a semver range such as
+   name are what let consumers pin a SemVer range such as
    `toolkits/universal#^1.0.0`.
 1. Set **Target** to `main`.
 1. Expand **Set as the latest release** and choose **Keep existing** so the
