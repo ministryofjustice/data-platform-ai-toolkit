@@ -8,11 +8,11 @@ A central repository of GitHub Copilot instructions and prompt files for Data Pl
 
 ## Available Toolkits
 
-| Toolkit              | Package name                   | Source path                     | Description                                                       |
-| -------------------- | ------------------------------ | ------------------------------- | ----------------------------------------------------------------- |
-| Universal            | `universal`                    | `toolkits/universal`            | Universal Copilot instructions for all Data Platform repositories |
-| Platform Engineering | `platform-engineering`         | `toolkits/platform-engineering` | Platform Engineering Copilot instructions and prompts             |
-| Software Engineering | `software-engineering`         | `toolkits/software-engineering` | Software Engineering Copilot instructions (Python, Django)        |
+| Toolkit              | Package name           | Source path                     | Description                                                       |
+| -------------------- | ---------------------- | ------------------------------- | ----------------------------------------------------------------- |
+| Universal            | `universal`            | `toolkits/universal`            | Universal Copilot instructions for all Data Platform repositories |
+| Platform Engineering | `platform-engineering` | `toolkits/platform-engineering` | Platform Engineering Copilot instructions and prompts             |
+| Software Engineering | `software-engineering` | `toolkits/software-engineering` | Software Engineering Copilot instructions (Python, Django)        |
 
 ## Setup Instructions
 
@@ -40,6 +40,7 @@ Consuming repositories declare the toolkits they need in their own `apm.yml` and
    }
    ```
 1. Create an `apm.yml` in the root of your repository to declare this toolkit as a dependency:
+
    ```yaml
    name: <name>
    version: 1.0.0
@@ -56,6 +57,7 @@ Consuming repositories declare the toolkits they need in their own `apm.yml` and
    `universal-v<version>` release tag and pins the exact commit in
    `apm.lock.yaml`. Use a caret range to accept compatible updates, or pin an
    exact tag (`#universal-v1.0.0`) or branch (`#main`) instead.
+
 1. Add `apm install` to your `.devcontainer/post-create.sh` script:
    ```bash
    #!/usr/bin/env bash
