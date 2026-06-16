@@ -10,7 +10,7 @@ marketplace:
     strategy: tag_pattern
 
   build:
-    tagPattern: "{name}-v{version}"
+    tagPattern: "{name}-{version}"
 
   outputs:
     claude: {}

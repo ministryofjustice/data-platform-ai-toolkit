@@ -82,4 +82,4 @@ The marketplace is defined by the `marketplace:` block in the root [`apm.yml`](a
    ```
 1. Commit both `apm.yml` and the generated `.claude-plugin/marketplace.json`.
 
-Each toolkit is versioned independently (`versioning.strategy: tag_pattern`). Pushing a tag of the form `<package-name>-v<version>` (for example `universal-toolkit-v1.0.0`) triggers the [Release Marketplace](.github/workflows/release-marketplace.yml) workflow, which rebuilds the artifact, attaches a checksum, and publishes a GitHub release.
+Each toolkit is versioned independently (`versioning.strategy: tag_pattern`). Pushing a tag of the form `<package-name>-<version>` (for example `universal-toolkit-1.0.0`) triggers the [Release Marketplace](.github/workflows/release-marketplace.yml) workflow, which rebuilds the artifact, attaches a checksum, and publishes a GitHub release.
