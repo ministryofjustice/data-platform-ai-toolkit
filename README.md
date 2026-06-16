@@ -83,3 +83,5 @@ The marketplace is defined by the `marketplace:` block in the root [`apm.yml`](a
 1. Commit both `apm.yml` and the generated `.claude-plugin/marketplace.json`.
 
 Each toolkit is versioned independently (`versioning.strategy: tag_pattern`). Pushing a tag of the form `<package-name>-v<version>` (for example `universal-toolkit-v1.0.0`) triggers the [Release Marketplace](.github/workflows/release-marketplace.yml) workflow, which rebuilds the artifact, attaches a checksum, and publishes a GitHub release.
+
+> **Note:** `apm marketplace check` reports `ls-remote` errors for the toolkits because it tries to resolve each `source` as a remote git ref, but the toolkits are declared as local paths (`./toolkits/...`) — the correct shape for a monorepo-hybrid marketplace. This diagnostic is not meaningful for local-path packages and can be ignored. The authoritative validation is `apm pack --check-versions --check-clean` (run in CI), which passes. When a consumer installs a toolkit, APM expands the local path against this repository's own coordinates (for example `ministryofjustice/data-platform-ai-toolkit/toolkits/universal`), so remote installs resolve correctly.
