@@ -131,11 +131,21 @@ universal toolkit at its current version:
    name are what let consumers pin a semver range such as
    `toolkits/universal#^1.0.0`.
 1. Set **Target** to `main`.
+1. Expand **Set as the latest release** and choose **Keep existing** so the
+   release is **not** marked as latest (see note below).
 1. Add a title and release notes, then click **Publish release**.
 
 Publishing triggers the [Release Marketplace](.github/workflows/release-marketplace.yml)
 workflow, which validates the release gates, rebuilds the artifact, and attaches
 `marketplace.json` and its checksum to the release.
+
+> **Note:** Leave every toolkit release **unmarked** as the latest release.
+> GitHub allows only one release repo-wide to be "Latest", but each toolkit has
+> an independent version line, so a single latest badge would misrepresent the
+> others. Nothing in this repository reads the latest flag — consumers pin a
+> specific tag and the live catalogue is read from `marketplace.json` on `main`
+> — so the badge is cosmetic and best left off. The UI ticks it by default, so
+> untick it on each draft.
 
 To release a **new** version of a toolkit (for example bumping universal to
 `1.1.0`), prepare `main` **before** drafting the release:
