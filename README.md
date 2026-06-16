@@ -87,14 +87,67 @@ The marketplace is defined by the `marketplace:` block in the root [`apm.yml`](a
    ```
 1. Commit both `apm.yml` and the generated `.claude-plugin/marketplace.json`.
 
-Each toolkit is versioned independently (`versioning.strategy: tag_pattern`),
-with tags rendered as `{name}-v{version}` (for example `universal-v1.0.0`). The
-`v` prefix and the package name matching the toolkit's source directory let
-consumers pin a semver range against the subpath (for example
-`toolkits/universal#^1.0.0`). To publish a release, use the GitHub UI: go to
-**Releases → Draft a new release**, create a tag of the form
-`<package-name>-v<version>` (for example `universal-v1.0.0`), add release notes,
-and click **Publish release**. Publishing triggers the
-[Release Marketplace](.github/workflows/release-marketplace.yml) workflow, which
-validates the release gates, rebuilds the artifact, and attaches
+### What a release is
+
+Each toolkit is versioned independently (`versioning.strategy: tag_pattern`).
+A release in this repository is a **git tag** (an immutable pointer to a commit
+on `main`) plus the full [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json)
+catalogue attached as an artifact. The release does **not** carve a single
+toolkit into its own bundle — `marketplace.json` always lists **all** toolkits,
+and it is byte-identical across any releases cut from the same commit.
+
+The thing that distinguishes one toolkit's release from another is the **tag
+name**, because that is the immutable ref a consumer pins. For example a
+consumer pins the universal toolkit with:
+
+```yaml
+dependencies:
+  apm:
+    - ministryofjustice/data-platform-ai-toolkit/toolkits/universal#universal-v1.0.0
+```
+
+The tag resolves to a commit, and the consumer reads the `toolkits/universal`
+subpath at that commit. That subpath plus tag is the per-toolkit carve-up — not
+the attached artifact. This is why releasing different versions for different
+toolkits from the same `main` commit is correct and intended.
+
+> **Note:** The release tag name is **not** validated by the workflow.
+> `apm pack --check-versions` only checks that each package version is
+> internally consistent; it never reads git tags. The `<package-name>-v<version>`
+> format is a convention you must type correctly by hand. Tag it wrong and the
+> pipeline still passes — it simply attaches the catalogue to a misnamed
+> release.
+
+### Cutting a release (GitHub UI)
+
+To publish a release for an existing version (no version change), e.g. the
+universal toolkit at its current version:
+
+1. Go to **Releases → Draft a new release**.
+1. **Choose a tag → Create new tag**, of the form `<package-name>-v<version>`
+   (for example `universal-v1.0.0`). The `<package-name>` matches the toolkit's
+   source directory (for example `universal`) and `<version>` must match that
+   package's `version:` in the root `apm.yml`. The `v` prefix and the matching
+   name are what let consumers pin a semver range such as
+   `toolkits/universal#^1.0.0`.
+1. Set **Target** to `main`.
+1. Add a title and release notes, then click **Publish release**.
+
+Publishing triggers the [Release Marketplace](.github/workflows/release-marketplace.yml)
+workflow, which validates the release gates, rebuilds the artifact, and attaches
 `marketplace.json` and its checksum to the release.
+
+To release a **new** version of a toolkit (for example bumping universal to
+`1.1.0`), prepare `main` **before** drafting the release:
+
+1. Bump `version:` in **both** `toolkits/<name>/apm.yml` and that package's
+   entry in the root [`apm.yml`](apm.yml).
+1. Regenerate and validate the artifact:
+   ```bash
+   apm pack --check-versions --check-clean
+   ```
+1. Commit `apm.yml` and the updated `.claude-plugin/marketplace.json` to `main`.
+1. Then draft the release with the new tag (e.g. `universal-v1.1.0`).
+
+Skipping the bump fails the release gates: `--check-clean` rejects a committed
+`marketplace.json` that does not match a fresh `apm pack`.
