@@ -10,23 +10,23 @@ marketplace:
     strategy: tag_pattern
 
   build:
-    tagPattern: "{name}-{version}"
+    tagPattern: "{name}-v{version}"
 
   outputs:
     claude: {}
 
   packages:
-    - name: universal-toolkit
+    - name: universal
       description: Universal Copilot instructions for all Data Platform repositories
       source: ./toolkits/universal
       version: 1.0.0
 
-    - name: platform-engineering-toolkit
+    - name: platform-engineering
       description: Platform Engineering Copilot instructions and prompts
       source: ./toolkits/platform-engineering
       version: 1.1.0
 
-    - name: software-engineering-toolkit
+    - name: software-engineering
       description: Software Engineering Copilot instructions (Python, Django)
       source: ./toolkits/software-engineering
       version: 1.0.0
