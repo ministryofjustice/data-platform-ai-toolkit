@@ -24,7 +24,7 @@ marketplace:
     - name: platform-engineering
       description: Platform Engineering Copilot instructions and prompts
       source: ./toolkits/platform-engineering
-      version: 1.1.0
+      version: 1.2.0
 
     - name: software-engineering
       description: Software Engineering Copilot instructions (Python, Django)
