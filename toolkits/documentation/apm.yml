@@ -1,0 +1,11 @@
+name: universal
+version: 1.0.0
+description: Documentation Toolkit
+author: Application Platforms
+targets:
+  - copilot
+  - cursor
+  - opencode
+dependencies:
+includes: auto
+scripts: {}
