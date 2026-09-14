@@ -18,7 +18,7 @@
     "toolkits",
     "querysets",
     "zizmor",
-    "Intune",
-    "OpenCode"
+    "intune",
+    "opencode"
   ]
 }
